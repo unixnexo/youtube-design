@@ -19,7 +19,23 @@ searchInput.addEventListener('blur', () => {
 });
 
 
+/**
+ * search overlay for < md screens
+ */
+const openSmSearch = document.getElementById('open-sm-search');
+const closeSmSearch = document.getElementById('close-sm-search');
+const smSearchOverlay = document.getElementById('sm-search-overlay');
+const smSearchInput = document.getElementById('sm-search-input');
+
+openSmSearch.addEventListener('click', () => {
+    smSearchOverlay.classList.remove('hidden');
+    smSearchInput.focus();
+});
+
+smSearchOverlay.addEventListener('click', () => {
+    smSearchOverlay.classList.add('hidden');
+});
+
 
 
 ////////// test
-
