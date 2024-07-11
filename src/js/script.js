@@ -1,7 +1,6 @@
-
-
-
-///// test
+/**
+ * searchbar
+ */
 const searchInput = document.querySelector('input[type=search]');
 const searchIcon = document.getElementById('searchIcon');
 
@@ -18,3 +17,9 @@ searchInput.addEventListener('blur', () => {
     searchIcon.classList.add('hidden');
     searchIcon.classList.remove('flex');
 });
+
+
+
+
+////////// test
+

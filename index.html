@@ -44,10 +44,10 @@
                 </div>
                 <!-- search bar -->
                 <div class="flex-1 flex justify-center">
-                    <form class="w-[70%]">
+                    <form class="w-full mx-5">
                         <div class="flex justify-center h-[40px]">
                             
-                            <div class="relative w-[65%]">
+                            <div class="relative w-[50%] shrink-0">
                                 <!-- search icon - shown when input focus -->
                                 <div id="searchIcon" class="hidden absolute left-0 items-center bg-transparent border border-r-0 border-youtube-border rounded-3xl rounded-r-none h-[40px] px-3">
                                     <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -57,16 +57,28 @@
                                 <input type="search" class="h-full w-full rounded-3xl rounded-r-none bg-[#121212] border border-youtube-border pl-5 focus:outline outline-youtube-blue-link" placeholder="Search" />
                             </div>
                             
-                            <button type="submit" class="flex justify-center items-center rounded-r-3xl bg-youtube-second-dark w-[64px] h-[40px] border border-youtube-border cursor-pointer">
-                                <svg fill="currentColor" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path clip-rule="evenodd" d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909ZM18 11a7 7 0 11-14 0 7 7 0 0114 0Z" fill-rule="evenodd"></path>
-                                </svg>
+                            <button type="submit" class="relative flex justify-center items-center">
+                                <div class="peer flex justify-center items-center rounded-r-3xl bg-youtube-second-dark w-[64px] h-[40px] border border-youtube-border cursor-pointer">
+                                    <svg fill="currentColor" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path clip-rule="evenodd" d="M16.296 16.996a8 8 0 11.707-.708l3.909 3.91-.707.707-3.909-3.909ZM18 11a7 7 0 11-14 0 7 7 0 0114 0Z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <!-- tooltip -->
+                                <div class="absolute opacity-0 peer-hover:opacity-100 top-12 p-2 rounded-md bg-youtube-tooltip/70 text-xs transition-opacity duration-200 select-none touch-none *:whitespace-nowrap">
+                                    <p>Search</p>
+                                </div>
                             </button>
                             <!-- speech search -->
-                            <div class="flex items-center justify-center size-[40px] rounded-full bg-youtube-second-dark hover:bg-youtube-hover active:bg-youtube-active ml-4 cursor-pointer">
-                                <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"></path>
-                                </svg>
+                            <div class="relative flex items-center justify-center">
+                                <div class="peer flex items-center justify-center size-[40px] rounded-full bg-youtube-second-dark hover:bg-youtube-hover active:bg-youtube-active ml-4 cursor-pointer">
+                                    <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 3c-1.66 0-3 1.37-3 3.07v5.86c0 1.7 1.34 3.07 3 3.07s3-1.37 3-3.07V6.07C15 4.37 13.66 3 12 3zm6.5 9h-1c0 3.03-2.47 5.5-5.5 5.5S6.5 15.03 6.5 12h-1c0 3.24 2.39 5.93 5.5 6.41V21h2v-2.59c3.11-.48 5.5-3.17 5.5-6.41z"></path>
+                                    </svg>
+                                </div>
+                                <!-- tooltip -->
+                                <div class="absolute opacity-0 peer-hover:opacity-100 top-12 p-2 rounded-md bg-youtube-tooltip/70 text-xs transition-opacity duration-200 select-none touch-none *:whitespace-nowrap">
+                                    <p>Search with your voice</p>
+                                </div>
                             </div>
                         </div>
                     </form>

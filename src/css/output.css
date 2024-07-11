@@ -572,6 +572,11 @@ video {
   top: 3rem;
 }
 
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .ml-4{
   margin-left: 1rem;
 }
@@ -627,8 +632,48 @@ video {
   width: 100%;
 }
 
+.w-\[80\%\]{
+  width: 80%;
+}
+
+.w-\[100\%\]{
+  width: 100%;
+}
+
+.w-\[400px\]{
+  width: 400px;
+}
+
+.w-\[600px\]{
+  width: 600px;
+}
+
+.w-\[70\]{
+  width: 70;
+}
+
+.w-\[70vw\]{
+  width: 70vw;
+}
+
+.w-\[60\%\]{
+  width: 60%;
+}
+
+.w-\[50\%\]{
+  width: 50%;
+}
+
+.max-w-\[600px\]{
+  max-width: 600px;
+}
+
 .flex-1{
   flex: 1 1 0%;
+}
+
+.shrink-0{
+  flex-shrink: 0;
 }
 
 .cursor-pointer{
@@ -665,8 +710,18 @@ video {
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .overflow-hidden{
   overflow: hidden;
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
 }
 
 .rounded-3xl{
@@ -750,6 +805,10 @@ video {
   padding-right: 1.25rem;
 }
 
+.pl-12{
+  padding-left: 3rem;
+}
+
 .pl-5{
   padding-left: 1.25rem;
 }
@@ -772,23 +831,14 @@ video {
   outline-color: #1C62B9;
 }
 
-.transition-transform{
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.blur{
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .transition-opacity{
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-1000{
-  transition-duration: 1000ms;
-}
-
-.duration-150{
   transition-duration: 150ms;
 }
 
@@ -843,6 +893,10 @@ input[type="search"]::-webkit-search-results-decoration {
   :root::-webkit-scrollbar-thumb {
     background: #ABABAB;
   }
+}
+
+.\*\:whitespace-nowrap > *{
+  white-space: nowrap;
 }
 
 .hover\:bg-youtube-hover:hover{
