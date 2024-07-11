@@ -19,6 +19,14 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
 
 /**
 * scrollbar
@@ -40,7 +48,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
 /******** test *******/
-/* .grid-item {
-    min-width: 0;
+/* * {
+    outline: 1px solid yellow;
 } */
 
