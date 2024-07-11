@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/output.css">
     <link rel="icon" type="image/x-icon" href="./public/img/youtubeIcon.svg">
-    <title>Youtube</title>
+    <title>YouTube</title>
 </head>
 <body class="bg-youtube-main-dark text-white">
     
@@ -16,7 +16,7 @@
                 <!-- left hand side -->
                 <div class="flex justify-center items-center md:space-x-5">
                     <!-- menu icon -->
-                    <div class="hidden md:flex items-center justify-center size-[40px] rounded-full hover:bg-youtube-hover active:bg-youtube-active cursor-pointer">
+                    <div class="hidden md:flex items-center justify-center ml-1.5 size-[40px] rounded-full hover:bg-youtube-hover active:bg-youtube-active cursor-pointer">
                         <svg class="fill-youtube-white-ish" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
                         </svg>
@@ -191,8 +191,293 @@
 
     </header>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <main>
+
+        <div class="flex">
+
+            <!-- side brief menu -->
+            <div class="flex flex-col mr-3 px-1 mt-3">
+                <!-- home icon -->
+                <div class="flex flex-col items-center space-y-1.5 py-4 px-1 rounded-xl hover:bg-youtube-hover active:bg-youtube-active">
+                    <svg fill="white" height="24"  width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 21V10.08l8-6.96 8 6.96V21h-6v-6h-4v6H4z"></path>
+                    </svg>
+                    <p class="text-[10px]">Home</p>
+                </div>
+                <!-- Shorts icon -->
+                <div class="flex flex-col items-center space-y-1.5 py-4 px-1 rounded-xl hover:bg-youtube-hover active:bg-youtube-active">
+                    <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33-1.2-.5L18 9.06c1.84-.96 2.53-3.23 1.56-5.06s-3.24-2.53-5.07-1.56L6 6.94c-1.29.68-2.07 2.04-2 3.49.07 1.42.93 2.67 2.22 3.25.03.01 1.2.5 1.2.5L6 14.93c-1.83.97-2.53 3.24-1.56 5.07.97 1.83 3.24 2.53 5.07 1.56l8.5-4.5c1.29-.68 2.06-2.04 1.99-3.49-.07-1.42-.94-2.68-2.23-3.25zm-.23 5.86-8.5 4.5c-1.34.71-3.01.2-3.72-1.14-.71-1.34-.2-3.01 1.14-3.72l2.04-1.08v-1.21l-.69-.28-1.11-.46c-.99-.41-1.65-1.35-1.7-2.41-.05-1.06.52-2.06 1.46-2.56l8.5-4.5c1.34-.71 3.01-.2 3.72 1.14.71 1.34.2 3.01-1.14 3.72L15.5 9.26v1.21l1.8.74c.99.41 1.65 1.35 1.7 2.41.05 1.06-.52 2.06-1.46 2.56z"></path>
+                    </svg>
+                    <p class="text-[10px]">Shorts</p>
+                </div>
+                <!-- Subscriptions icon -->
+                <div class="flex flex-col items-center space-y-1.5 py-4 px-1 rounded-xl hover:bg-youtube-hover active:bg-youtube-active">
+                    <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 18v-6l5 3-5 3zm7-15H7v1h10V3zm3 3H4v1h16V6zm2 3H2v12h20V9zM3 10h18v10H3V10z"></path>
+                    </svg>
+                    <p class="text-[10px]">Subscriptions</p>
+                </div>
+                <!-- You icon -->
+                <div class="flex flex-col items-center space-y-1.5 py-4 px-1 rounded-xl hover:bg-youtube-hover active:bg-youtube-active">
+                    <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m11 7 6 3.5-6 3.5V7zm7 13H4V6H3v15h15v-1zm3-2H6V3h15v15zM7 17h13V4H7v13z"></path>
+                    </svg>
+                    <p class="text-[10px]">You</p>
+                </div>
+            </div>
+
+            <!-- videos -->
+            <div class="shrink-0 flex-1 grid grid-cols-[repeat(auto-fill,minmax(400px,1fr))] gap-4 p-4">
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid1.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan1.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">michael scott being a foodie for ten minutes straight | The Office US | Comedy Bites</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">Comedy Bites</p>
+                                <svg class="fill-youtube-white-ish" height="14" width="14" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-white/60 text-sm">2.2M views . 1 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid2.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan2.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">I Love You...</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">ThatWasEpic</p>
+                                <svg class="fill-youtube-white-ish" height="14" width="14" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-white/60 text-sm">9.9M views . 6 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid3.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan3.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">Punisher || Take me to church</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">PESDRINHO</p>
+                            </div>
+                            <p class="text-white/60 text-sm">4.5M views . 3 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid1.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan1.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">michael scott being a foodie for ten minutes straight | The Office US | Comedy Bites</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">Comedy Bites</p>
+                                <svg class="fill-youtube-white-ish" height="14" width="14" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-white/60 text-sm">2.2M views . 1 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid2.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan2.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">I Love You...</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">ThatWasEpic</p>
+                                <svg class="fill-youtube-white-ish" height="14" width="14" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-white/60 text-sm">9.9M views . 6 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid3.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan3.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">Punisher || Take me to church</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">PESDRINHO</p>
+                            </div>
+                            <p class="text-white/60 text-sm">4.5M views . 3 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid1.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan1.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">michael scott being a foodie for ten minutes straight | The Office US | Comedy Bites</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">Comedy Bites</p>
+                                <svg class="fill-youtube-white-ish" height="14" width="14" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-white/60 text-sm">2.2M views . 1 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid2.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan2.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">I Love You...</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">ThatWasEpic</p>
+                                <svg class="fill-youtube-white-ish" height="14" width="14" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z"></path>
+                                </svg>
+                            </div>
+                            <p class="text-white/60 text-sm">9.9M views . 6 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col">
+                    <div class="aspect-video rounded-lg overflow-hidden mb-3">
+                        <img src="./public/img/vid3.webp" class="size-full object-cover" alt="video preview" />
+                    </div>
+                    <div class="flex">
+                        <div class="shrink-0 size-[36px] overflow-hidden rounded-full mr-2">
+                            <img src="./public/img/chan3.jpg" class="size-full object-cover" alt="channel picture" />
+                        </div>
+                        <div>
+                            <p class="line-clamp-2 mb-1">Punisher || Take me to church</p>
+                            <div class="flex items-center space-x-1">
+                                <p class="text-white/60 text-sm">PESDRINHO</p>
+                            </div>
+                            <p class="text-white/60 text-sm">4.5M views . 3 year ago</p>
+                        </div>
+                        <div class="shrink-0 ml-auto">
+                            <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
 
     <script src="./src/js/script.js"></script>
 </body>
