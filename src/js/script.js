@@ -37,5 +37,45 @@ smSearchOverlay.addEventListener('click', () => {
 });
 
 
+/**
+ * tags slider  
+ */
+const scrollContainer = document.getElementById('tags-slider-con');
+const scrollLeftBtn = document.getElementById('tags-pr-btn');
+const scrollRightBtn = document.getElementById('tags-ne-btn');
+const tagSlider = document.getElementById('tags-slider');
+
+function checkScroll() {
+  const atStart = scrollContainer.scrollLeft <= 0;
+  const atEnd = scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth - 1;
+
+  scrollLeftBtn.classList.toggle('hidden', atStart);
+  scrollRightBtn.classList.toggle('hidden', atEnd);
+
+  tagSlider.classList.toggle('no-before', atStart);
+  tagSlider.classList.toggle('no-after', atEnd);
+}
+
+scrollLeftBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({
+    left: -200,
+    behavior: 'smooth'
+  });
+  setTimeout(checkScroll, 300);
+});
+
+scrollRightBtn.addEventListener('click', () => {
+  scrollContainer.scrollBy({
+    left: 200,
+    behavior: 'smooth'
+  });
+  setTimeout(checkScroll, 300);
+});
+
+scrollContainer.addEventListener('scroll', checkScroll);
+
+checkScroll();
+window.addEventListener('resize', checkScroll);
+
 
 ////////// test
