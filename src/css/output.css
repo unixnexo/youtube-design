@@ -604,10 +604,6 @@ video {
   z-index: 20;
 }
 
-.z-50{
-  z-index: 50;
-}
-
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -616,6 +612,26 @@ video {
 .mx-5{
   margin-left: 1.25rem;
   margin-right: 1.25rem;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 .mb-1{
@@ -642,6 +658,10 @@ video {
   margin-left: auto;
 }
 
+.mr-10{
+  margin-right: 2.5rem;
+}
+
 .mr-2{
   margin-right: 0.5rem;
 }
@@ -656,6 +676,58 @@ video {
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mr-20{
+  margin-right: 5rem;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
+}
+
+.ml-5{
+  margin-left: 1.25rem;
+}
+
+.mr-28{
+  margin-right: 7rem;
+}
+
+.mr-24{
+  margin-right: 6rem;
+}
+
+.mr-5{
+  margin-right: 1.25rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mb-0{
+  margin-bottom: 0px;
+}
+
+.ml-3{
+  margin-left: 0.75rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.ml-2\.5{
+  margin-left: 0.625rem;
 }
 
 .line-clamp-2{
@@ -718,6 +790,10 @@ video {
   height: 100%;
 }
 
+.h-1{
+  height: 0.25rem;
+}
+
 .w-\[50\%\]{
   width: 50%;
 }
@@ -730,12 +806,20 @@ video {
   width: 100%;
 }
 
+.w-\[204px\]{
+  width: 204px;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
 
 .shrink-0{
   flex-shrink: 0;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .cursor-pointer{
@@ -764,8 +848,20 @@ video {
   flex-direction: column;
 }
 
+.items-start{
+  align-items: flex-start;
+}
+
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
+}
+
+.items-baseline{
+  align-items: baseline;
 }
 
 .justify-center{
@@ -812,6 +908,18 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
+}
+
+.self-start{
+  align-self: flex-start;
+}
+
+.self-end{
+  align-self: flex-end;
+}
+
+.self-center{
+  align-self: center;
 }
 
 .overflow-hidden{
@@ -873,6 +981,31 @@ video {
   border-color: rgb(48 48 48 / var(--tw-border-opacity));
 }
 
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.border-youtube-white-ish{
+  --tw-border-opacity: 1;
+  border-color: rgb(201 201 201 / var(--tw-border-opacity));
+}
+
+.border-youtube-second-dark{
+  --tw-border-opacity: 1;
+  border-color: rgb(34 34 34 / var(--tw-border-opacity));
+}
+
+.border-youtube-hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(39 39 39 / var(--tw-border-opacity));
+}
+
+.border-youtube-active{
+  --tw-border-opacity: 1;
+  border-color: rgb(61 61 61 / var(--tw-border-opacity));
+}
+
 .bg-\[\#121212\]{
   --tw-bg-opacity: 1;
   background-color: rgb(18 18 18 / var(--tw-bg-opacity));
@@ -899,6 +1032,11 @@ video {
 
 .bg-youtube-tooltip\/90{
   background-color: rgb(91 91 91 / 0.9);
+}
+
+.bg-red-700{
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 .fill-youtube-white-ish{
@@ -973,6 +1111,10 @@ video {
   padding-top: 0.75rem;
 }
 
+.pl-3{
+  padding-left: 0.75rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -991,6 +1133,27 @@ video {
   line-height: 1rem;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-\[1\.6rem\]{
+  font-size: 1.6rem;
+}
+
+.text-\[1rem\]{
+  font-size: 1rem;
+}
+
+.font-\[1\.6rem\]{
+  font-weight: 1.6rem;
+}
+
+.font-\[12\.6rem\]{
+  font-weight: 12.6rem;
+}
+
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1003,6 +1166,11 @@ video {
 
 .text-white\/60{
   color: rgb(255 255 255 / 0.6);
+}
+
+.text-red-700{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -1127,6 +1295,14 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /******** test *******/
 
+.\*\:h-\[40px\] > *{
+  height: 40px;
+}
+
+.\*\:w-\[204px\] > *{
+  width: 204px;
+}
+
 .\*\:cursor-pointer > *{
   cursor: pointer;
 }
@@ -1150,6 +1326,11 @@ input[type="search"]::-webkit-search-results-decoration {
 .hover\:bg-youtube-hover:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 39 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-youtube-active:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 61 61 / var(--tw-bg-opacity));
 }
 
 .focus\:outline:focus{
