@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 body, html {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* clears the ‘X’ input search from Internet Explorer */
@@ -79,6 +79,12 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /**
 * actual side menu
 **/
+@media only screen and (max-width:768px) {
+  #brief-side-menu, #actual-side-menu {
+    display: none;
+  }
+}
+
 #actual-side-menu {
   scrollbar-width: thin;
   overflow-y: hidden;
