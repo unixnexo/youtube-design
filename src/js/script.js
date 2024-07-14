@@ -79,3 +79,24 @@ window.addEventListener('resize', checkScroll);
 
 
 ////////// test
+const briefSideMenu = document.getElementById('brief-side-menu');
+const actualSideMenu = document.getElementById('actual-side-menu');
+const burgerMenuIcon = document.getElementById('burger-menu-icon');
+const showSideMenus = 'flex';
+const hideSideMenus = 'hidden';
+
+burgerMenuIcon.addEventListener('click', () => {
+  if (briefSideMenu.classList.contains(showSideMenus)) {
+    briefSideMenu.classList.remove(showSideMenus);
+    briefSideMenu.classList.add(hideSideMenus);
+
+    actualSideMenu.classList.remove(hideSideMenus);
+    actualSideMenu.classList.add(showSideMenus);
+  } else {
+    actualSideMenu.classList.add(hideSideMenus);
+    actualSideMenu.classList.remove(showSideMenus);
+
+    briefSideMenu.classList.add(showSideMenus);
+    briefSideMenu.classList.remove(hideSideMenus);
+  }
+});

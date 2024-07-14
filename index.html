@@ -16,7 +16,7 @@
                 <!-- left hand side -->
                 <div class="flex justify-center items-center md:space-x-5">
                     <!-- menu icon -->
-                    <div class="hidden md:flex items-center justify-center ml-1.5 size-[40px] rounded-full hover:bg-youtube-hover active:bg-youtube-active cursor-pointer">
+                    <div id="burger-menu-icon" class="hidden md:flex items-center justify-center ml-1.5 size-[40px] rounded-full hover:bg-youtube-hover active:bg-youtube-active cursor-pointer select-none touch-none">
                         <svg class="fill-youtube-white-ish" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
                             <path d="M21 6H3V5h18v1zm0 5H3v1h18v-1zm0 6H3v1h18v-1z"></path>
                         </svg>
@@ -196,7 +196,7 @@
         <div class="relative flex">
 
             <!-- side brief menu -->
-            <div class="hidden md:hidden flex-col mr-3 px-1">
+            <div id="brief-side-menu" class="flex flex-col mr-3 px-1">
                 <!-- home icon -->
                 <div class="flex flex-col items-center space-y-1.5 py-4 px-1 rounded-xl hover:bg-youtube-hover active:bg-youtube-active">
                     <svg fill="white" height="24"  width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
@@ -228,7 +228,7 @@
             </div> 
 
             <!-- side actual menu -->
-            <div id="actual-side-menu" class="hidden sticky top-16 left-0 md:flex flex-col max-h-[91vh] px-4 text-sm">
+            <div id="actual-side-menu" class="hidden sticky top-16 left-0 flex-col max-h-[91vh] px-4 text-sm">
                 <ul class="*:w-[204px] *:h-[40px] mt-2 mr-10">
                     <li class="flex items-center bg-youtube-second-dark hover:bg-youtube-active cursor-pointer p-2 rounded-xl">
                         <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
