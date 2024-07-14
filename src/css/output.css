@@ -600,8 +600,12 @@ video {
   top: 3rem;
 }
 
-.top-16{
-  top: 4rem;
+.top-\[62px\]{
+  top: 62px;
+}
+
+.top-\[63px\]{
+  top: 63px;
 }
 
 .z-10{

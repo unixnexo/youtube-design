@@ -78,7 +78,9 @@ checkScroll();
 window.addEventListener('resize', checkScroll);
 
 
-////////// test
+/**
+ * brief and actual side menus
+ */
 const briefSideMenu = document.getElementById('brief-side-menu');
 const actualSideMenu = document.getElementById('actual-side-menu');
 const burgerMenuIcon = document.getElementById('burger-menu-icon');
@@ -100,3 +102,7 @@ burgerMenuIcon.addEventListener('click', () => {
     briefSideMenu.classList.remove(hideSideMenus);
   }
 });
+
+
+
+////////// test
