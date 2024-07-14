@@ -48,13 +48,19 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /**
 * tags slider
 **/
-#tags-slider::after,  #tags-slider::before{
+#tags-slider::after,  #tags-slider::before {
   content: '';
   position: absolute;
   top: 0;
-  width: 250px;
   height: 100%;
   z-index: 10;
+  width: 100px;
+}
+
+@media only screen and (min-width:768px) {
+  #tags-slider::after,  #tags-slider::before {
+    width: 250px;
+  }
 }
 
 #tags-slider::before {
