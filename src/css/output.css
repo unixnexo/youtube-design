@@ -1088,6 +1088,10 @@ video {
   opacity: 0;
 }
 
+.opacity-100{
+  opacity: 1;
+}
+
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
