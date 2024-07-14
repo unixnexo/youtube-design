@@ -91,7 +91,7 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
   }
 }
 
-#actual-side-menu {
+#actual-side-menu-{
   scrollbar-width: thin;
   overflow-y: hidden;
   scrollbar-gutter: stable;

@@ -84,6 +84,7 @@ window.addEventListener('resize', checkScroll);
 const briefSideMenu = document.getElementById('brief-side-menu');
 const actualSideMenu = document.getElementById('actual-side-menu');
 const burgerMenuIcon = document.getElementById('burger-menu-icon');
+const burgerMenuIconCloseOnly = document.getElementById('burger-menu-icon-close-only');
 const showSideMenus = 'flex';
 const hideSideMenus = 'hidden';
 
@@ -101,6 +102,12 @@ burgerMenuIcon.addEventListener('click', () => {
     briefSideMenu.classList.add(showSideMenus);
     briefSideMenu.classList.remove(hideSideMenus);
   }
+});
+
+burgerMenuIconCloseOnly.addEventListener('click', () => {
+  actualSideMenu.classList.add(hideSideMenus);
+  briefSideMenu.classList.add(showSideMenus);
+  briefSideMenu.classList.remove(hideSideMenus);
 });
 
 
