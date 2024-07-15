@@ -124,5 +124,27 @@ burgerMenuIconCloseOnly.addEventListener('click', () => {
 });
 
 
+/**
+ * closing menus if clicked elsewhere
+ */
+if (window.innerWidth >= '768') {
+  document.addEventListener('click', (e) => {
+    if (!e.target === actualSideMenu || !actualSideMenu.contains(e.target) && (!e.target === burgerMenuIcon || !burgerMenuIcon.contains(e.target))) {
+      actualSideMenu.classList.add(hideSmooth);
+      document.body.classList.remove('overlay');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+} else {
+  document.addEventListener('click', (e) => {
+    if (!e.target === smSearchOverlay || !smSearchOverlay.contains(e.target) && (!e.target === openSmSearch || !openSmSearch.contains(e.target))) {
+      smSearchOverlay.classList.add('hidden');
+      document.body.classList.remove('overlay');
+    }
+  });
+}
+
 
 ////////// test
+
+
