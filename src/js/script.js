@@ -86,28 +86,39 @@ const actualSideMenu = document.getElementById('actual-side-menu');
 const burgerMenuIcon = document.getElementById('burger-menu-icon');
 const burgerMenuIconCloseOnly = document.getElementById('burger-menu-icon-close-only');
 const showSideMenus = 'flex';
-const hideSideMenus = 'hidden';
+const hideSideMenus = 'xl:hidden';
+const hideSmooth = '-translate-x-72';
 
 burgerMenuIcon.addEventListener('click', () => {
-  if (briefSideMenu.classList.contains(showSideMenus)) {
-    briefSideMenu.classList.remove(showSideMenus);
-    briefSideMenu.classList.add(hideSideMenus);
-
-    actualSideMenu.classList.remove(hideSideMenus);
-    actualSideMenu.classList.add(showSideMenus);
+  if (window.innerWidth <= '1280') {
+    // menu should flow out of the layout
+    actualSideMenu.classList.remove(hideSmooth);
+    document.body.classList.add('overflow-hidden');
+    document.body.classList.add('overlay');
   } else {
-    actualSideMenu.classList.add(hideSideMenus);
-    actualSideMenu.classList.remove(showSideMenus);
-
-    briefSideMenu.classList.add(showSideMenus);
-    briefSideMenu.classList.remove(hideSideMenus);
+    if (briefSideMenu.classList.contains(showSideMenus)) {
+      // hide brief menu
+      briefSideMenu.classList.remove(showSideMenus);
+      briefSideMenu.classList.add(hideSideMenus);
+      // show actual menu
+      actualSideMenu.classList.remove(hideSideMenus);
+      actualSideMenu.classList.add(showSideMenus);
+    } else {
+      // hide actual menu
+      actualSideMenu.classList.add(hideSideMenus);
+      actualSideMenu.classList.remove(showSideMenus);
+      // show brief menu
+      briefSideMenu.classList.add(showSideMenus);
+      briefSideMenu.classList.remove(hideSideMenus);
+    }
   }
+  
 });
 
 burgerMenuIconCloseOnly.addEventListener('click', () => {
-  actualSideMenu.classList.add(hideSideMenus);
-  briefSideMenu.classList.add(showSideMenus);
-  briefSideMenu.classList.remove(hideSideMenus);
+  actualSideMenu.classList.add(hideSmooth);
+  document.body.classList.remove('overflow-hidden');
+  document.body.classList.remove('overlay');
 });
 
 
