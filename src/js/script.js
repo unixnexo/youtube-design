@@ -128,6 +128,7 @@ burgerMenuIconCloseOnly.addEventListener('click', () => {
  * closing menus if clicked elsewhere
  */
 if (window.innerWidth >= '768') {
+  // actual menu on big screens
   document.addEventListener('click', (e) => {
     if (!e.target === actualSideMenu || !actualSideMenu.contains(e.target) && (!e.target === burgerMenuIcon || !burgerMenuIcon.contains(e.target))) {
       actualSideMenu.classList.add(hideSmooth);
@@ -136,6 +137,7 @@ if (window.innerWidth >= '768') {
     }
   });
 } else {
+  // search overlay on sm screens
   document.addEventListener('click', (e) => {
     if (!e.target === smSearchOverlay || !smSearchOverlay.contains(e.target) && (!e.target === openSmSearch || !openSmSearch.contains(e.target))) {
       smSearchOverlay.classList.add('hidden');
