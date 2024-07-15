@@ -28,12 +28,14 @@ const smSearchOverlay = document.getElementById('sm-search-overlay');
 const smSearchInput = document.getElementById('sm-search-input');
 
 openSmSearch.addEventListener('click', () => {
-    smSearchOverlay.classList.remove('hidden');
-    smSearchInput.focus();
+  smSearchOverlay.classList.remove('hidden');
+  document.body.classList.add('overlay');
+  smSearchInput.focus();
 });
 
-smSearchOverlay.addEventListener('click', () => {
-    smSearchOverlay.classList.add('hidden');
+closeSmSearch.addEventListener('click', () => {
+  smSearchOverlay.classList.add('hidden');
+  document.body.classList.remove('overlay');
 });
 
 
