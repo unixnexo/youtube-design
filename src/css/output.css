@@ -654,6 +654,11 @@ video {
   margin-right: 1.25rem;
 }
 
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -782,6 +787,10 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.h-px{
+  height: 1px;
 }
 
 .max-h-screen{
@@ -971,6 +980,10 @@ video {
 
 .border{
   border-width: 1px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
 }
 
 .border-r-0{
@@ -1527,6 +1540,10 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 56px;
   }
 
+  .xl\:top-\[63px\]{
+    top: 63px;
+  }
+
   .xl\:mr-10{
     margin-right: 2.5rem;
   }
@@ -1537,6 +1554,26 @@ input[type="search"]::-webkit-search-results-decoration {
 
   .xl\:max-h-\[calc\(100vh-56px\)\]{
     max-height: calc(100vh - 56px);
+  }
+
+  .xl\:max-h-\[calc\(100vh-60px\)\]{
+    max-height: calc(100vh - 60px);
+  }
+
+  .xl\:max-h-\[calc\(100vh-10px\)\]{
+    max-height: calc(100vh - 10px);
+  }
+
+  .xl\:max-h-\[calc\(100vh-50px\)\]{
+    max-height: calc(100vh - 50px);
+  }
+
+  .xl\:max-h-\[calc\(100vh-70px\)\]{
+    max-height: calc(100vh - 70px);
+  }
+
+  .xl\:max-h-\[calc\(100vh-100px\)\]{
+    max-height: calc(100vh - 100px);
   }
 
   .xl\:translate-x-0{
@@ -1551,6 +1588,20 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .hover\:\[\&\>\*\:not\(\:first-child\)\]\:bg-youtube-active>*:not(:first-child):hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 61 61 / var(--tw-bg-opacity));
+}
+
+.\[\&\>\*\:not\(hr\)\]\:cursor-pointer>*:not(hr){
+  cursor: pointer;
+}
+
+.\[\&\>\*\:not\(hr\)\]\:py-2>*:not(hr){
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.hover\:\[\&\>\*\:not\(hr\)\]\:bg-youtube-active>*:not(hr):hover{
   --tw-bg-opacity: 1;
   background-color: rgb(61 61 61 / var(--tw-bg-opacity));
 }
