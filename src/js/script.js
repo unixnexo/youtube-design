@@ -167,33 +167,71 @@ if (window.innerWidth >= '768') {
 //   }
 // });
 
-document.querySelectorAll('.dots-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    // btn rect
-    const btnOffsetTop = btn.offsetTop;
-    const btnOffsetLeft = btn.offsetLeft;
+// 3 dot post menu for > sm screens
+if (window.innerWidth >= 640) {
+  document.querySelectorAll('.dots-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // btn rect
+      const btnOffsetTop = btn.offsetTop;
+      const btnOffsetLeft = btn.offsetLeft;
+  
+      // find the specific popover
+      const popoverId = btn.getAttribute('popovertarget');
+      const popover = document.getElementById(popoverId);
+  
+      if (CSS.supports('position-anchor', 'unset')) {
+        // anchor the popover to btn
+        popover.style.positionAnchor = `--${popoverId}-btn`;
+        btn.style.anchorName = `--${popoverId}-btn`;
+      } else {
+        popover.style.top = `${btnOffsetTop + 100}px`;
+        popover.style.left = `${btnOffsetLeft - 130}px`;
+      }
+    });
+  });
+  
+  // to hide popovers when scrolled
+  window.addEventListener('scroll', () => {
+    const popovers = document.querySelectorAll('[popover]');
+    popovers.forEach(popover => {
+      if (popover.matches(':popover-open')) {
+        popover.hidePopover();
+      }
+    });
+  });
+} else {
+  // 3 dot post menu for < sm screens //
+  let menu;
+  let btnEl;
+  document.querySelectorAll('.dots-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btnEl = btn;
+      const id = btn.getAttribute('popovertarget');
+      menu = document.querySelector(`[data-post-menu='${id}']`);
+      menu.classList.toggle('hidden');
+      document.documentElement.classList.toggle('strong-overlay');
+    });
+  }); 
 
-    // find the specific popover
-    const popoverId = btn.getAttribute('popovertarget');
-    const popover = document.getElementById(popoverId);
-
-    if (CSS.supports('position-anchor', 'unset')) {
-      // anchor the popover to btn
-      popover.style.positionAnchor = `--${popoverId}-btn`;
-      btn.style.anchorName = `--${popoverId}-btn`;
-    } else {
-      popover.style.top = `${btnOffsetTop + 100}px`;
-      popover.style.left = `${btnOffsetLeft - 130}px`;
+  // close menu if clicked elsewhere
+  document.addEventListener('click', (e) => {
+    if (menu) {
+      if (e.target === menu || menu.contains(e.target) || e.target === btnEl || btnEl.contains(e.target)) {
+        // clicked on menu or 3 dot btn
+        // do nothing
+      } else {
+        menu.classList.add('hidden');
+        document.documentElement.classList.remove('strong-overlay');
+      }
     }
   });
-});
 
-// to hide popovers when scrolled
-window.addEventListener('scroll', () => {
-  const popovers = document.querySelectorAll('[popover]');
-  popovers.forEach(popover => {
-    if (popover.matches(':popover-open')) {
-      popover.hidePopover();
-    }
+  // close all menus on scroll
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('[data-post-menu]').forEach(menu => {
+      menu.classList.add('hidden');
+      document.documentElement.classList.remove('strong-overlay');
+    });
   });
-});
+
+}

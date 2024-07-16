@@ -576,6 +576,10 @@ video {
   top: -5rem;
 }
 
+.-top-5{
+  top: -1.25rem;
+}
+
 .bottom-0{
   bottom: 0px;
 }
@@ -586,6 +590,10 @@ video {
 
 .left-0{
   left: 0px;
+}
+
+.left-1\/2{
+  left: 50%;
 }
 
 .right-0{
@@ -620,30 +628,6 @@ video {
   top: 63px;
 }
 
-.left-1\/2{
-  left: 50%;
-}
-
-.-top-0{
-  top: -0px;
-}
-
-.-top-5{
-  top: -1.25rem;
-}
-
-.-top-3{
-  top: -0.75rem;
-}
-
-.-top-2{
-  top: -0.5rem;
-}
-
-.-top-4{
-  top: -1rem;
-}
-
 .z-10{
   z-index: 10;
 }
@@ -660,10 +644,6 @@ video {
   z-index: 210;
 }
 
-.m-auto{
-  margin: auto;
-}
-
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -677,16 +657,6 @@ video {
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-}
-
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.mx-10{
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 
 .mb-1{
@@ -741,16 +711,8 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-5{
-  margin-top: 1.25rem;
-}
-
 .mt-7{
   margin-top: 1.75rem;
-}
-
-.mb-10{
-  margin-bottom: 2.5rem;
 }
 
 .line-clamp-2{
@@ -810,11 +772,6 @@ video {
   height: 100%;
 }
 
-.size-6{
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .h-1{
   height: 0.25rem;
 }
@@ -827,20 +784,12 @@ video {
   height: 100%;
 }
 
-.h-28{
-  height: 7rem;
-}
-
-.h-5{
-  height: 1.25rem;
-}
-
-.h-6{
-  height: 1.5rem;
-}
-
 .max-h-screen{
   max-height: 100vh;
+}
+
+.w-16{
+  width: 4rem;
 }
 
 .w-\[204px\]{
@@ -863,36 +812,17 @@ video {
   width: 100%;
 }
 
-.w-10{
-  width: 2.5rem;
-}
-
-.w-7{
-  width: 1.75rem;
-}
-
-.w-14{
-  width: 3.5rem;
-}
-
-.w-12{
-  width: 3rem;
-}
-
-.w-20{
-  width: 5rem;
-}
-
-.w-16{
-  width: 4rem;
-}
-
 .flex-1{
   flex: 1 1 0%;
 }
 
 .shrink-0{
   flex-shrink: 0;
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-x-72{
@@ -902,11 +832,6 @@ video {
 
 .translate-x-1\/2{
   --tw-translate-x: 50%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-x-1\/2{
-  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1103,28 +1028,12 @@ video {
   fill: #C9C9C9;
 }
 
-.fill-youtube-hover{
-  fill: #272727;
-}
-
-.fill-youtube-active{
-  fill: #3D3D3D;
+.stroke-youtube-tooltip{
+  stroke: #5B5B5B;
 }
 
 .stroke-youtube-white-ish{
   stroke: #C9C9C9;
-}
-
-.stroke-youtube-active{
-  stroke: #3D3D3D;
-}
-
-.stroke-youtube-hover{
-  stroke: #272727;
-}
-
-.stroke-youtube-tooltip{
-  stroke: #5B5B5B;
 }
 
 .object-cover{
@@ -1142,10 +1051,6 @@ video {
 
 .p-2{
   padding: 0.5rem;
-}
-
-.p-3{
-  padding: 0.75rem;
 }
 
 .px-1{
@@ -1193,9 +1098,8 @@ video {
   padding-bottom: 1rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .pl-12{
@@ -1210,16 +1114,12 @@ video {
   padding-right: 2.5rem;
 }
 
-.pt-3{
-  padding-top: 0.75rem;
-}
-
 .pt-1{
   padding-top: 0.25rem;
 }
 
-.pb-3{
-  padding-bottom: 0.75rem;
+.pt-3{
+  padding-top: 0.75rem;
 }
 
 .text-center{
@@ -1314,6 +1214,21 @@ body, html {
   font-weight: 400;
   font-style: normal;
   scrollbar-gutter: stable;
+}
+
+html::before {
+  content: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  z-index: 200;
+}
+
+html.strong-overlay::before {
+  content: '';
 }
 
 body::before {
@@ -1443,7 +1358,9 @@ input[type="search"]::-webkit-search-results-decoration {
   overflow-y: auto;
 }
 
-/******** test *******/
+/**
+* html popover
+**/
 
 [popover] {
   inset: unset;
@@ -1460,20 +1377,7 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-html::before {
-  content: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.473);
-  z-index: 200;
-}
-
-html.strong-overlay::before {
-  content: '';
-}
+/******** test *******/
 
 .\*\:pointer-events-none > *{
   pointer-events: none;
@@ -1654,6 +1558,9 @@ html.strong-overlay::before {
 .\[\&\>\*\>span\]\:pr-\[30px\]>*>span{
   padding-right: 30px;
 }
+
+
+
 
 
 
