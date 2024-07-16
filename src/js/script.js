@@ -147,26 +147,32 @@ if (window.innerWidth >= '768') {
 }
 
 
-////////// test
-// const menuButton = document.getElementById('3dot-menu-btn');
-// const menu = document.getElementById('3dot-menu');
+/**
+ * show/hide main navbar - < md screens
+ */
+const mainNav = document.getElementById('main-nav');
+const hideMainNavbar = '-translate-y-14';
+let lastScrollTop = 0;
 
-// const dropdownHeight = '340'
-// menuButton.addEventListener('click', () => {
-//   const windowHeight = window.innerHeight;
-//   const dropdownTop = menuButton.getBoundingClientRect().top + window.scrollY;
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  let scrollDifference = Math.abs(scrollTop - lastScrollTop);
 
-//   if (windowHeight - dropdownTop < dropdownHeight) {
-//     menu.classList.remove('hidden');
-//     menu.classList.add('top-10');
-//     menu.classList.remove('-top-20');
-//   } else {
-//     menu.classList.remove('hidden');
-//     menu.classList.remove('top-10');
-//     menu.classList.add('-top-20');
-//   }
-// });
+  // Only proceed if scrolled more than 100 pixels
+  if (scrollDifference > 100) {
+    if (scrollTop > lastScrollTop) {
+      mainNav.classList.add(hideMainNavbar);
+    } else {
+      mainNav.classList.remove(hideMainNavbar);
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  }
+});
 
+
+/**
+ * 3 dot mens on posts
+ */
 // 3 dot post menu for > sm screens
 if (window.innerWidth >= 640) {
   document.querySelectorAll('.dots-btn').forEach(btn => {
@@ -235,3 +241,29 @@ if (window.innerWidth >= 640) {
   });
 
 }
+
+
+
+////////// test
+// const menuButton = document.getElementById('3dot-menu-btn');
+// const menu = document.getElementById('3dot-menu');
+
+// const dropdownHeight = '340'
+// menuButton.addEventListener('click', () => {
+//   const windowHeight = window.innerHeight;
+//   const dropdownTop = menuButton.getBoundingClientRect().top + window.scrollY;
+
+//   if (windowHeight - dropdownTop < dropdownHeight) {
+//     menu.classList.remove('hidden');
+//     menu.classList.add('top-10');
+//     menu.classList.remove('-top-20');
+//   } else {
+//     menu.classList.remove('hidden');
+//     menu.classList.remove('top-10');
+//     menu.classList.add('-top-20');
+//   }
+// });
+
+
+
+
