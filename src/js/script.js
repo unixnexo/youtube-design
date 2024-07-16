@@ -154,20 +154,22 @@ const mainNav = document.getElementById('main-nav');
 const hideMainNavbar = '-translate-y-14';
 let lastScrollTop = 0;
 
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  let scrollDifference = Math.abs(scrollTop - lastScrollTop);
-
-  // Only proceed if scrolled more than 100 pixels
-  if (scrollDifference > 100) {
-    if (scrollTop > lastScrollTop) {
-      mainNav.classList.add(hideMainNavbar);
-    } else {
-      mainNav.classList.remove(hideMainNavbar);
+if (window.innerWidth <= 768) {
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollDifference = Math.abs(scrollTop - lastScrollTop);
+  
+    // Only proceed if scrolled more than 100 pixels
+    if (scrollDifference > 100) {
+      if (scrollTop > lastScrollTop) {
+        mainNav.classList.add(hideMainNavbar);
+      } else {
+        mainNav.classList.remove(hideMainNavbar);
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-  }
-});
+  });
+}
 
 
 /**
@@ -190,8 +192,13 @@ if (window.innerWidth >= 640) {
         popover.style.positionAnchor = `--${popoverId}-btn`;
         btn.style.anchorName = `--${popoverId}-btn`;
       } else {
-        popover.style.top = `${btnOffsetTop + 100}px`;
+        // fallback for browsers that don't support html popover
         popover.style.left = `${btnOffsetLeft - 130}px`;
+        if (window.innerHeight - btn.getBoundingClientRect().bottom < 350) {
+          popover.style.top = `${btnOffsetTop - 300}px`;
+        } else {
+          popover.style.top = `${btnOffsetTop + 100}px`;
+        }
       }
     });
   });
@@ -244,26 +251,8 @@ if (window.innerWidth >= 640) {
 
 
 
+
 ////////// test
-// const menuButton = document.getElementById('3dot-menu-btn');
-// const menu = document.getElementById('3dot-menu');
-
-// const dropdownHeight = '340'
-// menuButton.addEventListener('click', () => {
-//   const windowHeight = window.innerHeight;
-//   const dropdownTop = menuButton.getBoundingClientRect().top + window.scrollY;
-
-//   if (windowHeight - dropdownTop < dropdownHeight) {
-//     menu.classList.remove('hidden');
-//     menu.classList.add('top-10');
-//     menu.classList.remove('-top-20');
-//   } else {
-//     menu.classList.remove('hidden');
-//     menu.classList.remove('top-10');
-//     menu.classList.add('-top-20');
-//   }
-// });
-
 
 
 
