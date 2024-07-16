@@ -119,4 +119,35 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 
 /******** test *******/
+[popover] {
+  inset: unset;
+  bottom: anchor(top);
+  right: anchor(right);
+  position-try-options: flip-block;
+}
+
+/* because in sm screens another menu is used that doesn't uses popover API since it's newly available */
+@media only screen and (max-width:640px) {
+  [popover] {
+    display: none !important;
+  }
+}
+
+html::before {
+  content: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  z-index: 200;
+}
+
+html.strong-overlay::before {
+  content: '';
+}
+
+
+
 

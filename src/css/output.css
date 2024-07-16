@@ -572,8 +572,16 @@ video {
   position: sticky;
 }
 
+.-top-20{
+  top: -5rem;
+}
+
 .bottom-0{
   bottom: 0px;
+}
+
+.bottom-7{
+  bottom: 1.75rem;
 }
 
 .left-0{
@@ -582,6 +590,10 @@ video {
 
 .right-0{
   right: 0px;
+}
+
+.right-1\/2{
+  right: 50%;
 }
 
 .right-3{
@@ -596,12 +608,40 @@ video {
   top: 0.25rem;
 }
 
+.top-10{
+  top: 2.5rem;
+}
+
 .top-12{
   top: 3rem;
 }
 
 .top-\[63px\]{
   top: 63px;
+}
+
+.left-1\/2{
+  left: 50%;
+}
+
+.-top-0{
+  top: -0px;
+}
+
+.-top-5{
+  top: -1.25rem;
+}
+
+.-top-3{
+  top: -0.75rem;
+}
+
+.-top-2{
+  top: -0.5rem;
+}
+
+.-top-4{
+  top: -1rem;
 }
 
 .z-10{
@@ -614,6 +654,14 @@ video {
 
 .z-\[110\]{
   z-index: 110;
+}
+
+.z-\[210\]{
+  z-index: 210;
+}
+
+.m-auto{
+  margin: auto;
 }
 
 .mx-4{
@@ -629,6 +677,16 @@ video {
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
 }
 
 .mb-1{
@@ -681,6 +739,18 @@ video {
 
 .mt-3{
   margin-top: 0.75rem;
+}
+
+.mt-5{
+  margin-top: 1.25rem;
+}
+
+.mt-7{
+  margin-top: 1.75rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 
 .line-clamp-2{
@@ -740,6 +810,11 @@ video {
   height: 100%;
 }
 
+.size-6{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .h-1{
   height: 0.25rem;
 }
@@ -750,6 +825,18 @@ video {
 
 .h-full{
   height: 100%;
+}
+
+.h-28{
+  height: 7rem;
+}
+
+.h-5{
+  height: 1.25rem;
+}
+
+.h-6{
+  height: 1.5rem;
 }
 
 .max-h-screen{
@@ -768,8 +855,36 @@ video {
   width: 64px;
 }
 
+.w-\[95\%\]{
+  width: 95%;
+}
+
 .w-full{
   width: 100%;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-7{
+  width: 1.75rem;
+}
+
+.w-14{
+  width: 3.5rem;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.w-16{
+  width: 4rem;
 }
 
 .flex-1{
@@ -782,6 +897,16 @@ video {
 
 .-translate-x-72{
   --tw-translate-x: -18rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-x-1\/2{
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-1\/2{
+  --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -955,6 +1080,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-youtube-hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 39 / var(--tw-bg-opacity));
+}
+
 .bg-youtube-main-dark{
   --tw-bg-opacity: 1;
   background-color: rgb(15 15 15 / var(--tw-bg-opacity));
@@ -973,13 +1103,37 @@ video {
   fill: #C9C9C9;
 }
 
+.fill-youtube-hover{
+  fill: #272727;
+}
+
+.fill-youtube-active{
+  fill: #3D3D3D;
+}
+
 .stroke-youtube-white-ish{
   stroke: #C9C9C9;
+}
+
+.stroke-youtube-active{
+  stroke: #3D3D3D;
+}
+
+.stroke-youtube-hover{
+  stroke: #272727;
+}
+
+.stroke-youtube-tooltip{
+  stroke: #5B5B5B;
 }
 
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-0{
+  padding: 0px;
 }
 
 .p-1{
@@ -988,6 +1142,10 @@ video {
 
 .p-2{
   padding: 0.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-1{
@@ -1003,6 +1161,16 @@ video {
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.py-0\.5{
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
 }
 
 .py-1{
@@ -1025,6 +1193,11 @@ video {
   padding-bottom: 1rem;
 }
 
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pl-12{
   padding-left: 3rem;
 }
@@ -1039,6 +1212,14 @@ video {
 
 .pt-3{
   padding-top: 0.75rem;
+}
+
+.pt-1{
+  padding-top: 0.25rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .text-center{
@@ -1264,12 +1445,50 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /******** test *******/
 
+[popover] {
+  inset: unset;
+  bottom: anchor(top);
+  right: anchor(right);
+  position-try-options: flip-block;
+}
+
+/* because in sm screens another menu is used that doesn't uses popover API since it's newly available */
+
+@media only screen and (max-width:640px) {
+  [popover] {
+    display: none !important;
+  }
+}
+
+html::before {
+  content: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.473);
+  z-index: 200;
+}
+
+html.strong-overlay::before {
+  content: '';
+}
+
+.\*\:pointer-events-none > *{
+  pointer-events: none;
+}
+
 .\*\:mb-1 > *{
   margin-bottom: 0.25rem;
 }
 
 .\*\:mr-2 > *{
   margin-right: 0.5rem;
+}
+
+.\*\:flex > *{
+  display: flex;
 }
 
 .\*\:h-\[40px\] > *{
@@ -1284,6 +1503,22 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
+.\*\:items-center > *{
+  align-items: center;
+}
+
+.\*\:space-x-3 > * > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.\*\:space-x-4 > * > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .\*\:whitespace-nowrap > *{
   white-space: nowrap;
 }
@@ -1294,6 +1529,16 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .\*\:p-2 > *{
   padding: 0.5rem;
+}
+
+.\*\:px-3 > *{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.\*\:py-2 > *{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .\*\:font-bold > *{
@@ -1308,6 +1553,11 @@ input[type="search"]::-webkit-search-results-decoration {
 .hover\:bg-youtube-hover:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(39 39 39 / var(--tw-bg-opacity));
+}
+
+.hover\:\*\:bg-youtube-active > *:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 61 61 / var(--tw-bg-opacity));
 }
 
 .focus\:outline:focus{
@@ -1326,6 +1576,12 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .peer:hover ~ .peer-hover\:opacity-100{
   opacity: 1;
+}
+
+@media (min-width: 640px){
+  .sm\:hidden{
+    display: none;
+  }
 }
 
 @media (min-width: 768px){
@@ -1394,4 +1650,11 @@ input[type="search"]::-webkit-search-results-decoration {
   --tw-bg-opacity: 1;
   background-color: rgb(61 61 61 / var(--tw-bg-opacity));
 }
+
+.\[\&\>\*\>span\]\:pr-\[30px\]>*>span{
+  padding-right: 30px;
+}
+
+
+
 

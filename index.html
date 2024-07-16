@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-youtube-main-dark">
+<html lang="en" class="bg-youtube-main-dark strong-overlay">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -567,10 +567,89 @@
                                 <p class="text-white/60 text-sm">2.2M views . 1 year ago</p>
                             </div>
                             <div class="shrink-0 ml-auto">
-                                <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <button popovertarget="popover1" class="dots-btn rounded-full active:bg-youtube-second-dark p-1 cursor-pointer select-none touch-none *:pointer-events-none">
                                     <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
                                     </svg>
+                                </button>
+                                <!-- 3 dot menu - > sm screens -->
+                                <div popover id="popover1" class="absolute bg-youtube-hover rounded-xl py-2 text-white p-0">
+                                    <ul class="*:flex *:items-center *:space-x-4 *:py-2 *:px-3 hover:*:bg-youtube-active *:cursor-pointer [&>*>span]:pr-[30px] text-sm whitespace-nowrap py-0.5">
+                                        <li>
+                                            <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 16h-7v-1h7v1zm0-5H9v1h12v-1zm0-4H3v1h18V7zm-11 8-7-4v8l7-4z"></path>
+                                            </svg>
+                                            <span>Add to queue</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path>
+                                            </svg>
+                                            <span>Save to Watch later</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M22 13h-4v4h-2v-4h-4v-2h4V7h2v4h4v2zm-8-6H2v1h12V7zM2 12h8v-1H2v1zm0 4h8v-1H2v1z"></path>
+                                            </svg>
+                                            <span>Save to playlist</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z"></path>
+                                            </svg>
+                                            <span>Download</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M15 5.63 20.66 12 15 18.37V14h-1c-3.96 0-7.14 1-9.75 3.09 1.84-4.07 5.11-6.4 9.89-7.1l.86-.13V5.63M14 3v6C6.22 10.13 3.11 15.33 2 21c2.78-3.97 6.44-6 12-6v6l8-9-8-9z"></path>
+                                            </svg>
+                                            <span>Share</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM3 12c0 2.31.87 4.41 2.29 6L18 5.29C16.41 3.87 14.31 3 12 3c-4.97 0-9 4.03-9 9zm15.71-6L6 18.71C7.59 20.13 9.69 21 12 21c4.97 0 9-4.03 9-9 0-2.31-.87-4.41-2.29-6z" fill-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Not interested</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm7 11H5v-2h14v2z"></path>
+                                            </svg>
+                                            <span>Don't recommend channel</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="m13.18 4 .24 1.2.16.8H19v7h-5.18l-.24-1.2-.16-.8H6V4h7.18M14 3H5v18h1v-9h6.6l.4 2h7V5h-5.6L14 3z"></path>
+                                            </svg>
+                                            <span>Report</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- 3 dot menu - < sm screens -->
+                                <div class="fixed sm:hidden bottom-7 right-1/2 translate-x-1/2 z-[210] w-[95%] pb-3 px-3 pt-1 bg-youtube-hover rounded-xl text-white">
+                                    <svg class="absolute -top-5 left-1/2 -translate-x-1/2 stroke-youtube-tooltip w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                    </svg>
+                                    <ul class="flex flex-col whitespace-nowrap *:flex *:items-center *:space-x-3 *:py-2 mt-7">
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM3 12c0 2.31.87 4.41 2.29 6L18 5.29C16.41 3.87 14.31 3 12 3c-4.97 0-9 4.03-9 9zm15.71-6L6 18.71C7.59 20.13 9.69 21 12 21c4.97 0 9-4.03 9-9 0-2.31-.87-4.41-2.29-6z" fill-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Not interested</span>
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1" width="24" height="24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                            </svg>                                              
+                                            <span>Don't recommend channel</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path>
+                                            </svg>
+                                            <span>Save to Watch later</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -595,10 +674,63 @@
                                 <p class="text-white/60 text-sm">9.9M views . 6 year ago</p>
                             </div>
                             <div class="shrink-0 ml-auto">
-                                <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <button popovertarget="popover2" class="dots-btn rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
                                     <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
                                     </svg>
+                                </button>
+                                <!-- 3 dot menu -->
+                                <div popover id="popover2" class="absolute bg-youtube-hover rounded-xl py-2 text-white p-0">
+                                    <ul class="*:flex *:items-center *:space-x-4 *:py-2 *:px-3 hover:*:bg-youtube-active *:cursor-pointer [&>*>span]:pr-[30px] text-sm whitespace-nowrap py-0.5">
+                                        <li>
+                                            <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 16h-7v-1h7v1zm0-5H9v1h12v-1zm0-4H3v1h18V7zm-11 8-7-4v8l7-4z"></path>
+                                            </svg>
+                                            <span>Add to queue</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path>
+                                            </svg>
+                                            <span>Save to Watch later</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M22 13h-4v4h-2v-4h-4v-2h4V7h2v4h4v2zm-8-6H2v1h12V7zM2 12h8v-1H2v1zm0 4h8v-1H2v1z"></path>
+                                            </svg>
+                                            <span>Save to playlist</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z"></path>
+                                            </svg>
+                                            <span>Download</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M15 5.63 20.66 12 15 18.37V14h-1c-3.96 0-7.14 1-9.75 3.09 1.84-4.07 5.11-6.4 9.89-7.1l.86-.13V5.63M14 3v6C6.22 10.13 3.11 15.33 2 21c2.78-3.97 6.44-6 12-6v6l8-9-8-9z"></path>
+                                            </svg>
+                                            <span>Share</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM3 12c0 2.31.87 4.41 2.29 6L18 5.29C16.41 3.87 14.31 3 12 3c-4.97 0-9 4.03-9 9zm15.71-6L6 18.71C7.59 20.13 9.69 21 12 21c4.97 0 9-4.03 9-9 0-2.31-.87-4.41-2.29-6z" fill-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Not interested</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm7 11H5v-2h14v2z"></path>
+                                            </svg>
+                                            <span>Don't recommend channel</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="m13.18 4 .24 1.2.16.8H19v7h-5.18l-.24-1.2-.16-.8H6V4h7.18M14 3H5v18h1v-9h6.6l.4 2h7V5h-5.6L14 3z"></path>
+                                            </svg>
+                                            <span>Report</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -620,10 +752,63 @@
                                 <p class="text-white/60 text-sm">4.5M views . 3 year ago</p>
                             </div>
                             <div class="shrink-0 ml-auto">
-                                <div class="rounded-full active:bg-youtube-second-dark p-1 cursor-pointer">
+                                <button popovertarget="popover3" class="dots-btn rounded-full active:bg-youtube-second-dark p-1 cursor-pointer select-none touch-none *:pointer-events-none">
                                     <svg fill="white" height="24" width="24" viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M12 16.5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5zM10.5 12c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5zm0-6c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5-1.5.67-1.5 1.5z"></path>
                                     </svg>
+                                </button>
+                                <!-- 3 dot menu -->
+                                <div popover id="popover3" class="absolute bg-youtube-hover rounded-xl py-2 text-white p-0">
+                                    <ul class="*:flex *:items-center *:space-x-4 *:py-2 *:px-3 hover:*:bg-youtube-active *:cursor-pointer [&>*>span]:pr-[30px] text-sm whitespace-nowrap py-0.5">
+                                        <li>
+                                            <svg fill="white" height="24" width="24" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 16h-7v-1h7v1zm0-5H9v1h12v-1zm0-4H3v1h18V7zm-11 8-7-4v8l7-4z"></path>
+                                            </svg>
+                                            <span>Add to queue</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M14.97 16.95 10 13.87V7h2v5.76l4.03 2.49-1.06 1.7zM12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"></path>
+                                            </svg>
+                                            <span>Save to Watch later</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M22 13h-4v4h-2v-4h-4v-2h4V7h2v4h4v2zm-8-6H2v1h12V7zM2 12h8v-1H2v1zm0 4h8v-1H2v1z"></path>
+                                            </svg>
+                                            <span>Save to playlist</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M17 18v1H6v-1h11zm-.5-6.6-.7-.7-3.8 3.7V4h-1v10.4l-3.8-3.8-.7.7 5 5 5-4.9z"></path>
+                                            </svg>
+                                            <span>Download</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M15 5.63 20.66 12 15 18.37V14h-1c-3.96 0-7.14 1-9.75 3.09 1.84-4.07 5.11-6.4 9.89-7.1l.86-.13V5.63M14 3v6C6.22 10.13 3.11 15.33 2 21c2.78-3.97 6.44-6 12-6v6l8-9-8-9z"></path>
+                                            </svg>
+                                            <span>Share</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zM3 12c0 2.31.87 4.41 2.29 6L18 5.29C16.41 3.87 14.31 3 12 3c-4.97 0-9 4.03-9 9zm15.71-6L6 18.71C7.59 20.13 9.69 21 12 21c4.97 0 9-4.03 9-9 0-2.31-.87-4.41-2.29-6z" fill-rule="evenodd"></path>
+                                            </svg>
+                                            <span>Not interested</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="M12 3c-4.96 0-9 4.04-9 9s4.04 9 9 9 9-4.04 9-9-4.04-9-9-9m0-1c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm7 11H5v-2h14v2z"></path>
+                                            </svg>
+                                            <span>Don't recommend channel</span>
+                                        </li>
+                                        <li>
+                                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false">
+                                                <path d="m13.18 4 .24 1.2.16.8H19v7h-5.18l-.24-1.2-.16-.8H6V4h7.18M14 3H5v18h1v-9h6.6l.4 2h7V5h-5.6L14 3z"></path>
+                                            </svg>
+                                            <span>Report</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

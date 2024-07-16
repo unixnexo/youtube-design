@@ -148,5 +148,52 @@ if (window.innerWidth >= '768') {
 
 
 ////////// test
+// const menuButton = document.getElementById('3dot-menu-btn');
+// const menu = document.getElementById('3dot-menu');
 
+// const dropdownHeight = '340'
+// menuButton.addEventListener('click', () => {
+//   const windowHeight = window.innerHeight;
+//   const dropdownTop = menuButton.getBoundingClientRect().top + window.scrollY;
 
+//   if (windowHeight - dropdownTop < dropdownHeight) {
+//     menu.classList.remove('hidden');
+//     menu.classList.add('top-10');
+//     menu.classList.remove('-top-20');
+//   } else {
+//     menu.classList.remove('hidden');
+//     menu.classList.remove('top-10');
+//     menu.classList.add('-top-20');
+//   }
+// });
+
+document.querySelectorAll('.dots-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // btn rect
+    const btnOffsetTop = btn.offsetTop;
+    const btnOffsetLeft = btn.offsetLeft;
+
+    // find the specific popover
+    const popoverId = btn.getAttribute('popovertarget');
+    const popover = document.getElementById(popoverId);
+
+    if (CSS.supports('position-anchor', 'unset')) {
+      // anchor the popover to btn
+      popover.style.positionAnchor = `--${popoverId}-btn`;
+      btn.style.anchorName = `--${popoverId}-btn`;
+    } else {
+      popover.style.top = `${btnOffsetTop + 100}px`;
+      popover.style.left = `${btnOffsetLeft - 130}px`;
+    }
+  });
+});
+
+// to hide popovers when scrolled
+window.addEventListener('scroll', () => {
+  const popovers = document.querySelectorAll('[popover]');
+  popovers.forEach(popover => {
+    if (popover.matches(':popover-open')) {
+      popover.hidePopover();
+    }
+  });
+});
