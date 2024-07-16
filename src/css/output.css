@@ -1472,11 +1472,6 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: rgb(39 39 39 / var(--tw-bg-opacity));
 }
 
-.hover\:\*\:bg-youtube-active > *:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(61 61 61 / var(--tw-bg-opacity));
-}
-
 .focus\:outline:focus{
   outline-style: solid;
 }
@@ -1536,10 +1531,6 @@ input[type="search"]::-webkit-search-results-decoration {
     position: sticky;
   }
 
-  .xl\:top-\[56px\]{
-    top: 56px;
-  }
-
   .xl\:top-\[63px\]{
     top: 63px;
   }
@@ -1552,28 +1543,8 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
   }
 
-  .xl\:max-h-\[calc\(100vh-56px\)\]{
-    max-height: calc(100vh - 56px);
-  }
-
-  .xl\:max-h-\[calc\(100vh-60px\)\]{
-    max-height: calc(100vh - 60px);
-  }
-
-  .xl\:max-h-\[calc\(100vh-10px\)\]{
-    max-height: calc(100vh - 10px);
-  }
-
-  .xl\:max-h-\[calc\(100vh-50px\)\]{
-    max-height: calc(100vh - 50px);
-  }
-
   .xl\:max-h-\[calc\(100vh-70px\)\]{
     max-height: calc(100vh - 70px);
-  }
-
-  .xl\:max-h-\[calc\(100vh-100px\)\]{
-    max-height: calc(100vh - 100px);
   }
 
   .xl\:translate-x-0{
